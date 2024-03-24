@@ -10,9 +10,9 @@ class FlaskrTestCase(unittest.TestCase):
     def test_outputs(self):
         rv = self.app.get('/outputs')
         s = str(rv.data)
-        # Assuming you want to check if SUPPORTED formats are present in the response
+        
         self.assertTrue(all(format in s for format in SUPPORTED))
 
     def test_msg_with_output(self):
         rv = self.app.get('/?output=json')
-        self.assertEqual(b'{ "imie":"Michal", "msg":"Hello World!"}', rv.data)
+        self.assertEqual(b'{"imie":"Michal","msg":"Hello World!"}', rv.data)

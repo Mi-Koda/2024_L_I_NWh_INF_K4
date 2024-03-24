@@ -1,10 +1,10 @@
 version: 2.1
 
 jobs:
-  build-and-test: # Fixed job name
+  build-and-test:
     machine:
       image: ubuntu-2004:202104-01
-    steps: # Fixed indentation
+    steps:
       - checkout
       - run: make deps
       - run: make test
