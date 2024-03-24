@@ -8,3 +8,4 @@ run:
 .PHONY: test
 test:
 	PYTHONPATH=. py.test --verbose -s
+	
