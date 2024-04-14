@@ -14,3 +14,5 @@ workflows:
   basic:
     jobs:
       - build-and-test
+- run: make docker_push 
+docker_layer_caching: true 
